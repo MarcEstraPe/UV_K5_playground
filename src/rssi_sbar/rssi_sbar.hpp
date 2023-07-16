@@ -71,14 +71,14 @@ public:
       static unsigned int u32DrawVoltagePsc = 0;
       if (u32DrawVoltagePsc++ % 16)
       {
-         memset(FwData.pStatusBarData + VoltageOffset, 0, 4 * 5);
-         DisplayStatusBar.SetCoursor(0, VoltageOffset);
-         DisplayStatusBar.PrintFixedDigitsNumber2(*FwData.p16Voltage, 2, 1);
-         memset(FwData.pStatusBarData + VoltageOffset + 7 + 1, 0b1100000, 2); // dot
-         DisplayStatusBar.SetCoursor(0, VoltageOffset + 7 + 4);
-         DisplayStatusBar.PrintFixedDigitsNumber2(*FwData.p16Voltage, 0, 2);
-         memcpy(FwData.pStatusBarData + VoltageOffset + 4 * 6 + 2, FwData.pSmallLeters + 128 * 2 + 102, 5); // V character
-         Fw.FlushStatusbarBufferToScreen();
+         //memset(FwData.pStatusBarData + VoltageOffset, 0, 4 * 5);
+         //DisplayStatusBar.SetCoursor(0, VoltageOffset);
+         //DisplayStatusBar.PrintFixedDigitsNumber2(*FwData.p16Voltage, 2, 1);
+         //memset(FwData.pStatusBarData + VoltageOffset + 7 + 1, 0b1100000, 2); // dot
+         //DisplayStatusBar.SetCoursor(0, VoltageOffset + 7 + 4);
+         //DisplayStatusBar.PrintFixedDigitsNumber2(*FwData.p16Voltage, 0, 2);
+         //memcpy(FwData.pStatusBarData + VoltageOffset + 4 * 6 + 2, FwData.pSmallLeters + 128 * 2 + 102, 5); // V character
+         //Fw.FlushStatusbarBufferToScreen();
       }
 
       if (Fw.BK4819Read(0x0C) & 0b10)
